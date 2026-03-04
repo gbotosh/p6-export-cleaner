@@ -151,7 +151,7 @@ The cleaned dataset will be saved in:
 data_processed/
 ```
 
-Technologies Used
+### Technologies Used
 
 Python
 
@@ -161,7 +161,7 @@ Excel data processing
 
 Data engineering concepts
 
-Use Cases
+### Use Cases
 
 This tool can be used in several project controls workflows:
 
