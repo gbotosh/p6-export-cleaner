@@ -52,7 +52,6 @@ Python Cleaning Script
 Cleaned Dataset for Analytics
 
 ![P6 Cleaning Pipeline](docs/p6-cleaning-pipeline.png)
-
 ---
 
 ## Example Issues in Raw Export
@@ -81,36 +80,40 @@ After cleaning:
 
 ## Project Structure
 
-
-P6_export
+```
+p6-export-cleaner
 │
 ├── data_raw
-│ Raw Primavera exports
+│   Raw Primavera exports
 │
 ├── data_processed
-│ Cleaned datasets
+│   Cleaned datasets
 │
 ├── outputs
-│ Diagnostics / reports
+│   Diagnostics / reports
+│
+├── docs
+│   Project diagrams and images
 │
 ├── src
-│
-│ ├── cleaners
-│ │ Data cleaning logic
-│ │
-│ └── ingest
-│ Data ingestion and parsing
+│   ├── cleaners
+│   │   Data cleaning logic
+│   │
+│   ├── ingest
+│   │   Data ingestion and parsing
+│   │
+│   └── pipelines
+│       Cleaning pipelines
 │
 ├── run.py
-│ Main execution script
+│   Main execution script
 │
 ├── requirements.txt
-│ Python dependencies
+│   Python dependencies
 │
 └── README.md
+```
 
-
----
 
 ## Installation
 
@@ -119,27 +122,35 @@ Clone the repository:
 ```bash
 git clone https://github.com/gbotosh/p6-export-cleaner.git
 cd p6-export-cleaner
-
+```
 Create a virtual environment:
-
+```bash
 python -m venv venv
-
+```
 Activate environment (PowerShell):
-
+```bash
 .\venv\Scripts\Activate
-
+```
 Install dependencies:
-
+```bash
 pip install -r requirements.txt
-Usage
+```
+## Usage
 
-Run the cleaner on a Primavera export:
+Put the Primavera P6 export file (excel format) in the `data_raw` folder.
 
+Run the cleaner on the export:
+
+```bash
 python run.py --type activities --file data_raw/sample_activities_export.xlsx
+```
 
 The cleaned dataset will be saved in:
 
+```
 data_processed/
+```
+
 Technologies Used
 
 Python
@@ -162,7 +173,7 @@ Feeding schedule data into analytics pipelines
 
 Supporting schedule diagnostics and reporting
 
-Author
+### Author
 
 Olaoluwa Gbotoso
 
@@ -176,7 +187,7 @@ Power BI dashboards
 
 Python automation for project data
 
-Future Improvements
+### Future Improvements
 
 Planned enhancements include:
 
