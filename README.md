@@ -137,19 +137,39 @@ pip install -r requirements.txt
 ```
 ## Usage
 
-Put the Primavera P6 export file (excel format) in the `data_raw` folder.
+1. Create two folders in the project root:
 
-Run the cleaner on the export:
-
-```bash
-python run.py --type activities --file data_raw/sample_activities_export.xlsx
+```
+data_raw
+data_processed
 ```
 
-The cleaned dataset will be saved in:
+2. Place your Primavera P6 Excel export inside the `data_raw` folder.
+
+Example:
+
+```
+data_raw/sample_activities.xlsx
+```
+
+3. Run the cleaner from the project root:
+
+```bash
+python run.py --type activities --file data_raw/sample_activities.xlsx
+```
+
+4. The cleaned dataset in three formats (Excel, CSV, Parquet) will be saved automatically in the `data_processed` folder.
+
+Example output:
 
 ```
 data_processed/
+├── sample_activities_cleaned.csv
+├── sample_activities_cleaned.xlsx
+└── sample_activities_cleaned.parquet
 ```
+
+You can use **any name for the input file**, but the folder names `data_raw` and `data_processed` must be maintained.
 
 ### Technologies Used
 
